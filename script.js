@@ -38,6 +38,29 @@ function clear() {
 
 function display() {
     //document.appendChild(buttonValues)
+    let displayVal;
+   
+    let keys = document.querySelectorAll('#key');
+    let clearKey = document.querySelector('#clear-btn');
+    let deleteKey = document.querySelector('#delete-btn');
+    let calcDisplay = document.querySelector('#calculator-display');
+
+
+    keys.forEach((key) => {
+        key.addEventListener('mousedown', () => {         //every time a button is pressed, get value
+            //store value in a display variable
+            displayVal = key.textContent;
+            calcDisplay.textContent += displayVal;        //insert the variable value into the display field
+        });
+    });
+    
+    clearKey.addEventListener('mousedown', () => {        //clear the calculator display when clear button is pressed
+        calcDisplay.innerHTML = '';
+    });
+    
+    deleteKey.addEventListener('mousedown', () => {       //start deleting the most recent entered character in the display
+       calcDisplay.textContent = calcDisplay.textContent.slice(0, -1);
+    })
 }
 
 function calcBrain() {
@@ -51,3 +74,5 @@ function calcBrain() {
 
 
 }
+
+display();
