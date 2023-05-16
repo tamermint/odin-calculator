@@ -6,5 +6,11 @@ complex interactions at the backend
 
 ![alt text](https://github.com/tamermint/odin-calculator/blob/main/Calculator1.png?raw=true)
 
+# CSS Declarations
 
+- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
 
+- font-family: 'Josefin Sans', sans-serif;
