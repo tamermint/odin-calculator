@@ -20,13 +20,16 @@ body {
 }
 
 #calculator-display {
+    display: flex;
     height: 2.5em;
     width: 90%;
     background-color: rgba(0,0,0,0.6);
     margin-top: 40px;
     padding: 5px;
     color: gold;
-    font-weight: 400;
+    font-weight: 200;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 #calculator-body {
