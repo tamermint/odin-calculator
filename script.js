@@ -13,21 +13,24 @@ const divNum = (a, b) => {
     else return a / b ;}
 
 function calcBrain(firstVal, secondVal, opVal) {
+    let result;
+
     if (opVal === "+") {
-       return addNum(firstVal, secondVal);
-        }
+       result = addNum(firstVal, secondVal);
+    }
     else if(opVal === "-") {
-        return subtNum(firstVal, secondVal);
+       result = subtNum(firstVal, secondVal);
     }
     else if(opVal === "*") {
-        return multNum(firstVal, secondVal);
+        result = multNum(firstVal, secondVal);
     }
     else if(opVal === "/") {
-        return divNum(firstVal, secondVal);
+        result = divNum(firstVal, secondVal);
     }
     else {
         return "Error!";
     }
+    return Math.round(result * 100) / 100;
 }
 
 function operate() {
