@@ -25,7 +25,12 @@ function calcBrain(firstVal, secondVal, opVal) {
         result = multNum(firstVal, secondVal);
     }
     else if(opVal === "/") {
+        if(secondVal === 0){
+            return "Lmao, press clear and try again!"
+        }
+        else{
         result = divNum(firstVal, secondVal);
+        }
     }
     else {
         return "Error!";
