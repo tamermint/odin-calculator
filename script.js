@@ -33,7 +33,7 @@ function calcBrain(firstVal, secondVal, opVal) {
 function operate() {
     let firstVal, secondVal, opVal;
     
-    let calculationsDone = false;
+    let calculationsDone = false;        //to check if a calculation has been performed
 
     let opCode = document.querySelectorAll('#math-key');
     let calcDisplay = document.querySelector('#calculator-display');
@@ -41,16 +41,16 @@ function operate() {
    
     opCode.forEach((key) => { 
         key.addEventListener('mousedown', () => {
-        if(firstVal && !calculationsDone) {
-            secondVal = parseFloat(calcDisplay.textContent)
-            calcDisplay.textContent = calcBrain(firstVal, secondVal, opVal);
-            firstVal = parseFloat(calcDisplay.textContent);
+        if(firstVal && !calculationsDone) {                   //if calculations has been already performed
+            secondVal = parseFloat(calcDisplay.textContent)   //set secondVal to numbers onscreen and get the floating point value as well
+            calcDisplay.textContent = calcBrain(firstVal, secondVal, opVal);         //perform calculator functions
+            firstVal = parseFloat(calcDisplay.textContent);    //set the output to firstVal
         } else {
-            firstVal = parseFloat(calcDisplay.textContent);
+            firstVal = parseFloat(calcDisplay.textContent);     //else the first input is firstVal and clear out the screen after that
             calcDisplay.textContent = '';
         }
         opVal = key.getAttribute('value');
-        calculationsDone = false;
+        calculationsDone = false;                              //set the calculation done to false so that we can repeat the condition
         });
     });
 
