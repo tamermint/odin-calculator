@@ -30,7 +30,7 @@ function calcBrain(firstVal, secondVal, opVal) {
     else {
         return "Error!";
     }
-    return Math.round(result * 100) / 100;
+    return Math.round(result * 100) / 100;         //floating point values are limited to two places decimal
 }
 
 function operate() {
